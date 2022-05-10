@@ -2,7 +2,7 @@
 {
 	public class BinarySearch
 	{
-		public int Search(int query, int[] sortedArray)
+		public int Chop(int query, int[] sortedArray)
 		{
 			if (sortedArray == null || sortedArray.Length == 0)
 				return -1;
@@ -13,26 +13,26 @@
 				else
 					return -1;
 
-			int halfwayIndex = sortedArray.Length / 2;
-			int halfwayValue = sortedArray[halfwayIndex];
+			return Recurse(query, sortedArray, 0, sortedArray.Length - 1);
 
-			if (halfwayValue == query)
-				return halfwayIndex;
-
-			if (halfwayValue > query)
-				return Search(query, SliceArray(sortedArray, 0, halfwayIndex));
-
-			int topHalfIndex = Search(query, SliceArray(sortedArray, halfwayIndex, sortedArray.Length - halfwayIndex));
-			if (topHalfIndex > -1)
-				topHalfIndex += halfwayIndex;
-			return topHalfIndex;
 		}
 
-		private static int[] SliceArray(int[] source, int index, int length)
+		private static int Recurse(int query, int[] sortedArray, int min, int max)
 		{
-			int[] slice = new int[length];
-			Array.Copy(source, index, slice, 0, length);
-			return slice;
+			if (min > max)
+			{
+				return -1;
+			}
+			else
+			{
+				int middleIndex = (min + max) / 2;
+				if (sortedArray[middleIndex] == query)
+					return middleIndex;
+				else if (sortedArray[middleIndex] > query)
+					return Recurse(query, sortedArray, min, middleIndex - 1);
+				else
+					return Recurse(query, sortedArray, middleIndex + 1, max);
+			}
 		}
 	}
 }

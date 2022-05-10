@@ -10,7 +10,7 @@ for (int i = 0; i < evenArray.Length; i++)
 Stopwatch watch = new Stopwatch();
 watch.Start();
 BinarySearch search = new BinarySearch();
-int index = search.Search(1999998, evenArray);
+int index = search.Chop(1999998, evenArray);
 watch.Stop();
 
 Console.WriteLine("Binary Search for last item in array of {0}, Index is {1}.  Ellapsed time: {2}ms", evenArray.Length, index, watch.ElapsedMilliseconds);
@@ -18,7 +18,7 @@ Console.WriteLine("Binary Search for last item in array of {0}, Index is {1}.  E
 
 watch.Start();
 search = new BinarySearch();
-index = search.Search(1, evenArray);
+index = search.Chop(1, evenArray);
 watch.Stop();
 
 Console.WriteLine("Binary Search for item not in array of {0} items, Index is {1}.  Ellapsed time: {2}ms", evenArray.Length, index, watch.ElapsedMilliseconds);

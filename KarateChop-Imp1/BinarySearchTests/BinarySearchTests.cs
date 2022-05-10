@@ -36,7 +36,7 @@ namespace Search
 		[TestCase(-1, 8, new int[] { 1, 3, 5, 7 }, TestName = "ChopFourItemArrayWithNoMatch8")]
 		public void Chop(int expectedIndex, int query, int[] array)
 		{
-			Assert.AreEqual(expectedIndex, search.Search(query, array), "Searching an array of {0} items for the value {1} did not return {2}.", array == null ? "NULL" : array.Length, query, expectedIndex);
+			Assert.AreEqual(expectedIndex, search.Chop(query, array), "Searching an array of {0} items for the value {1} did not return {2}.", array == null ? "NULL" : array.Length, query, expectedIndex);
 		}
 	}
 }
