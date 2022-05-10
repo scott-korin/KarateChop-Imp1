@@ -5,9 +5,9 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KarateChop-Imp1", "KarateChop-Imp1\KarateChop-Imp1.csproj", "{0FE96995-D501-42C1-ABFF-1953768B576B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search", "Search\Search.csproj", "{7BA91EA9-4278-4CF3-B95D-34851DE0D20A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search", "BinarySearchTests\Search.csproj", "{7BA91EA9-4278-4CF3-B95D-34851DE0D20A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchTests", "BinarySearchTests\SearchTests.csproj", "{3BB09121-6B7B-4B5B-86B0-FD26F8339C85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchTests", "TestProject1\SearchTests.csproj", "{3BB09121-6B7B-4B5B-86B0-FD26F8339C85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
